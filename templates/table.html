@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a multiplication table</title>
+    <style>
+        .even {
+            color: darkred;
+        }
+        .odd {
+            color: darkblue;
+        }
+        td{
+            border: 1[x solid black];
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>/</th>
+            {% for number in table[0] %}
+            <th>{{number}}</th>
+            {% endfor %}
+        </tr>
+        {% for row in table %}
+        <tr>
+            <th>{{row[0]}}</th>
+            {% for number in row %}
+            <td>{{number}}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+    
+    
+</body>
+</html>
